@@ -1,0 +1,17 @@
+$grid-breakpoints: (
+  //'xs': 0,
+  'sm': 768px,
+  'md': 960px - 16px,
+  'lg': 1280px - 16px,
+  'xl': 1920px - 16px
+);
+$grid-gutter: 30px;
+$color-pack: false !default;
+
+$spacer: 5px !default;
+
+$container-max-widths: (
+  'md': 100%,
+  'lg': 1140px,
+  'xl': 1140px,
+);

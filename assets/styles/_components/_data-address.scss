@@ -1,0 +1,18 @@
+.data-address {
+  color: var(--main-100);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  svg {
+    width: 8px !important;
+    height: 10px !important;
+    margin: 4px 5px;
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--black-100);
+  }
+}

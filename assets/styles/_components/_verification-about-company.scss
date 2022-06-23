@@ -1,0 +1,43 @@
+.verification__content__about-company {
+  padding-bottom: 16px;
+
+  @include sm-tablets {
+    padding-bottom: 56px;
+  }
+
+  .text-input {
+    label {
+      font-size: 12px;
+    }
+
+    input {
+      margin-bottom: 21px;
+
+      @include md-desktop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .checkbox-button {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 12px;
+
+    button {
+      width: 20px;
+      height: 20px;
+      margin: 2px;
+
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+    span {
+      font-size: 12px;
+      line-height: 160%;
+      color: var(--gray-100);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.auth-layout {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url('~/static/images/auth.png');
+  background-size: cover;
+  padding: 60px 0 100px;
+
+  @include sm-tablets {
+    padding-top: 100px;
+  }
+}

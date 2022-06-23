@@ -1,0 +1,40 @@
+.photo-gallery {
+  width: 100%;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 10px;
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 378px;
+    height: 378px;
+
+    @include sm-tablets {
+      height: 603px;
+    }
+  }
+
+  &__slick {
+    .slick-slide {
+      &:first-child {
+        img {
+          padding-left: 0;
+        }
+      }
+      &:last-child {
+        img {
+          padding-right: 0;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      padding: 0 5px;
+      height: 80px;
+    }
+  }
+}

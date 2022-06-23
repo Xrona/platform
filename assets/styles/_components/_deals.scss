@@ -1,0 +1,99 @@
+.deals {
+  margin: 0 1px;
+
+  @include sm-tablets {
+    padding: 10px 24px;
+    margin: 0;
+  }
+
+  @include md-desktop {
+    padding: 10px 0;
+    min-height: calc(100vh - 76px);
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include sm-tablets {
+      margin-bottom: 33px;
+    }
+
+    @include md-desktop {
+      margin-bottom: 29px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 26px;
+    gap: 24px;
+
+    @include sm-tablets {
+      align-items: center;
+      flex-direction: row;
+      margin-bottom: 24px;
+      gap: 30px;
+    }
+
+    @include md-desktop {
+      margin-bottom: 20px;
+    }
+
+    .nav-filter,
+    .nav-period {
+      width: 100%;
+
+      @include sm-tablets {
+        width: 50%;
+      }
+
+      @include md-desktop {
+        width: auto;
+      }
+    }
+
+    .nav-filter {
+      .box-dropdown__button {
+        justify-content: flex-start;
+        gap: 10px;
+
+        span {
+          font-weight: 500;
+          line-height: 20px;
+          flex-grow: 1;
+          text-align: left;
+        }
+      }
+
+      @include md-desktop {
+        min-width: 272px;
+      }
+    }
+  }
+
+  .data-card__content {
+    .box-button {
+      margin-top: 29px;
+    }
+  }
+
+  &__button-more {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}

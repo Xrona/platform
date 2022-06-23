@@ -1,0 +1,181 @@
+.v-overlay {
+  .v-overlay__scrim {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+  }
+}
+
+.v-overlay--active .v-overlay__scrim {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  opacity: 1 !important;
+}
+
+.v-dialog {
+  box-shadow: none !important;
+
+  @include sm-tablets {
+    width: 445px !important;
+  }
+
+  .modal {
+    background-color: white;
+    border-radius: 10px;
+    padding: 48px 32px;
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @include sm-tablets {
+      gap: 20px;
+      padding: 80px 48px;
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--black-100);
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      color: var(--blue-100);
+      line-height: 22.4px;
+
+      span {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        color: var(--black-100);
+
+        @include sm-tablets {
+          display: inline-block;
+        }
+      }
+    }
+
+    .box-button {
+      margin-top: 24px;
+      height: 48px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 48px;
+
+      @include sm-tablets {
+        margin-top: 20px;
+        width: 160px;
+      }
+    }
+  }
+
+  .modal-invest {
+    p {
+      margin-bottom: 0 !important;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    h1 {
+      &.insufficient-funds {
+        color: var(--red-100);
+      }
+
+      span {
+        display: block;
+        font-weight: 500;
+        color: var(--main-100);
+        text-decoration: underline;
+      }
+    }
+
+    .text-input {
+      width: 160px;
+      height: 48px;
+
+      input {
+        background-color: var(--gray-10);
+        font-weight: 500;
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    &__buttons {
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+
+      .box-button {
+        margin-bottom: 0;
+        width: 100%;
+
+        &:last-child {
+          margin-top: 0;
+        }
+      }
+
+      @include sm-tablets {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+
+        .box-button {
+          max-width: 160px;
+
+          &:last-child {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .sms-modal {
+    min-height: 448px;
+
+    @include sm-tablets {
+      min-height: 481px;
+    }
+
+    &__code {
+      display: flex;
+      gap: 16px;
+
+      @include sm-tablets {
+        gap: 30px;
+      }
+
+      input {
+        color: var(--black-100);
+        width: 54px;
+        height: 54px;
+        background-color: var(--gray-10);
+        border-radius: 10px;
+        line-height: 54px;
+        text-align: center;
+      }
+    }
+
+    &__repeat-code {
+      font-size: 12px;
+      text-align: center;
+
+      span {
+        display: block;
+        font-weight: 400;
+        color: var(--blue-100);
+      }
+
+      button {
+        display: block;
+        font-weight: 500;
+        color: var(--main-100);
+      }
+    }
+  }
+}

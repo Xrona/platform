@@ -1,0 +1,55 @@
+.objects {
+  margin: 34px 1px 45px;
+
+  @include sm-tablets {
+    margin: 30px 24px 45px;
+  }
+
+  @include md-desktop {
+    margin: 7px 0 45px;
+    min-height: calc(100vh - 76px);
+  }
+}
+
+.objects,
+.bid {
+  h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--black-100);
+    margin-bottom: 34px;
+
+    @include sm-tablets {
+      margin-bottom: 28px;
+      line-height: 160%;
+    }
+
+    @include md-desktop {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__button-more {
+    box-shadow: 0 0 0 1px var(--gray-40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 57px;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--blue-100);
+    font-size: 12px;
+    line-height: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 400;
+
+    @include sm-tablets {
+      height: 62px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

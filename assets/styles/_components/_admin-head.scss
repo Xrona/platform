@@ -1,0 +1,91 @@
+.admin-head {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 16px;
+  align-items: center;
+
+  @include lg-desktop {
+    column-gap: 30px;
+  }
+
+  &__back {
+    width: 60px;
+    flex-grow: 1;
+
+    @include lg-desktop {
+      flex-grow: initial;
+    }
+
+    .box-button {
+      padding: 0 18px;
+    }
+
+    @include sm-tablets {
+      width: 70px;
+    }
+
+    @include md-desktop {
+      width: 160px;
+    }
+  }
+
+  &__edit,
+  &__publish {
+    @include lg-desktop {
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  .box-button {
+    width: 60px;
+
+    span {
+      display: none;
+    }
+
+    @include sm-tablets {
+      width: 70px;
+    }
+
+    @include lg-desktop {
+      width: 160px;
+
+      span {
+        display: block;
+      }
+    }
+
+    &.admin-head__delete {
+      @include sm-tablets {
+        width: 210px;
+
+        span {
+          display: block;
+        }
+      }
+
+      @include lg-desktop {
+        width: 160px;
+      }
+    }
+  }
+
+  h1 {
+    text-align: left;
+    width: 100%;
+    order: 6;
+    font-size: 24px;
+    color: var(--black-100);
+    font-weight: 500;
+    line-height: 30px;
+
+    @include lg-desktop {
+      order: initial;
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+}

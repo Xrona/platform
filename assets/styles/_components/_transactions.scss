@@ -1,0 +1,260 @@
+.transactions {
+  margin-top: 15px;
+  padding-bottom: 60px;
+
+  @include sm-tablets {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include md-desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black-100);
+    line-height: 48px;
+  }
+
+  &__head {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include sm-tablets {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__balance {
+    padding: 30px 43px;
+    background-color: white;
+    border: 1px solid var(--gray-70);
+    border-radius: 10px;
+    margin-bottom: 40px;
+
+    @include sm-tablets {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      align-items: start;
+      row-gap: 12px;
+      padding: 20px;
+    }
+
+    @include md-desktop {
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    &__free,
+    &__reserve {
+      h4 {
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 400;
+        color: var(--black-100);
+        margin-bottom: 4px;
+
+        @include sm-tablets {
+          color: var(--blue-100);
+        }
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 160%;
+        color: var(--black-100);
+        margin-bottom: 0 !important;
+
+        &::after {
+          display: inline;
+          content: var(--ruble);
+          font-size: 12px;
+          line-height: 160%;
+          color: var(--blue-100);
+        }
+      }
+    }
+
+    &__free + &__reserve {
+      margin-top: 25px;
+      margin-bottom: 30px;
+
+      @include sm-tablets {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      @include md-desktop {
+        flex-grow: 1;
+      }
+    }
+
+    &__options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @include sm-tablets {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      @include md-desktop {
+        gap: 20px;
+      }
+
+      .box-button {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 500;
+
+        @include md-desktop {
+          width: 160px;
+        }
+      }
+    }
+  }
+
+  &__table {
+    .table-row {
+      grid-template-columns: 40px repeat(2, 1fr);
+
+      @include sm-tablets {
+        grid-template-columns: 40px repeat(2, 2fr) repeat(2, 1fr);
+      }
+
+      @include md-desktop {
+        grid-template-columns: 40px 3fr repeat(2, 2fr) 3fr 60px;
+      }
+
+      > div {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 160%;
+        color: var(--blue-100);
+
+        @include sm-tablets {
+          font-size: 12px;
+        }
+      }
+
+      .column-sum {
+        color: var(--main-100);
+
+        &.positive {
+          &:before {
+            content: '+ ';
+          }
+        }
+
+        &:after {
+          content: '/руб';
+          color: var(--main-100);
+        }
+
+        &.negative {
+          color: var(--red-100);
+
+          &:after {
+            color: var(--red-100);
+          }
+        }
+      }
+
+      .column-file {
+        width: 100%;
+        height: 48px;
+        border-radius: 4px;
+        background-color: var(--white-10);
+        color: var(--main-100);
+      }
+    }
+
+    .table-head {
+      > div {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--blue-100);
+      }
+
+      .box-dropdown {
+        @include sm-tablets {
+          display: none;
+        }
+
+        &__button {
+          padding-left: 0;
+          padding-right: 0;
+          color: var(--gray-70);
+
+          span {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--blue-100);
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+
+        &__menu {
+          &__item {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    &__sm {
+      display: none;
+
+      @include sm-tablets {
+        display: block;
+      }
+    }
+
+    &__sm-hide {
+      @include sm-tablets {
+        display: none;
+      }
+    }
+
+    &__md {
+      display: none;
+      width: 100%;
+
+      @include md-desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__more-button {
+    margin-top: 30px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--gray-70);
+    background-color: white;
+    color: var(--blue-100);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 60px;
+    border-radius: 10px;
+  }
+}

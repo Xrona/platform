@@ -1,0 +1,32 @@
+.verification__content__financial-position {
+  padding-bottom: 40px;
+
+  @include sm-tablets {
+    padding-bottom: 70px;
+  }
+
+  @include md-desktop {
+    padding-bottom: 85px;
+  }
+
+  h3 {
+    font-size: 14px;
+    line-height: 160%;
+    font-weight: 500;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .checkbox-button + .checkbox-button {
+    margin-top: 20px;
+  }
+
+  .financial-position-sm {
+    margin-top: 20px;
+
+    @include md-desktop {
+      margin-top: 0;
+    }
+  }
+}

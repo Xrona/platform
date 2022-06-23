@@ -1,0 +1,115 @@
+.input-dropdown {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.disabled-input {
+    .input-dropdown__target {
+      background-color: var(--gray-10);
+
+      &__placeholder,
+      &__value,
+      svg {
+        color: var(--gray-70);
+      }
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    color: var(--gray-100);
+    line-height: 160%;
+
+    &__required {
+      color: var(--red-100);
+    }
+  }
+
+  &__target {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 48px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 12px;
+    line-height: 160%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    &__value {
+      color: var(--black-100);
+    }
+
+    &__placeholder {
+      color: var(--gray-80);
+    }
+
+    &.error-border {
+      border-color: var(--red-100);
+      color: var(--red-100);
+
+      .input-dropdown__target__placeholder {
+        color: var(--red-100);
+      }
+    }
+
+    svg {
+      transition: transform ease-in 0.3s;
+      fill: var(--blue-100);
+      margin: 9.21px 7.78px;
+      width: 5.6px;
+      height: 3.3px;
+
+      @include md-desktop {
+        width: 8.44px;
+        height: 4.99px;
+      }
+
+      &.icon-show {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__menu {
+    max-height: 400px;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 81px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 10px;
+      width: 100%;
+      min-height: 48px;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 160%;
+      color: var(--blue-100);
+
+      &:hover {
+        background-color: var(--main-100);
+        color: white;
+      }
+    }
+  }
+}

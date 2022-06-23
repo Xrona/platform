@@ -1,0 +1,186 @@
+.security-form {
+  height: min-content;
+  padding: 48px 16px;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 660px;
+
+  @include sm-tablets {
+    padding: 48px;
+  }
+
+  @include md-desktop {
+    padding: 60px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__span {
+    font-size: 16px;
+    line-height: 25.6px;
+    text-align: center;
+    color: var(--gray-100);
+    padding-bottom: 20px;
+  }
+
+  &__explanation {
+    font-size: 12px;
+    color: var(--blue-100);
+    line-height: 19.2px;
+  }
+
+  &__check {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .text-input input {
+      margin-bottom: 4px;
+    }
+
+    .security-form__buttons {
+      @include md-desktop {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  &__reset {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    &__questions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      h4 {
+        padding-bottom: 8px;
+      }
+
+      @include sm-tablets {
+        h4 {
+          padding-bottom: 0;
+        }
+
+        gap: 24px;
+      }
+
+      @include md-desktop {
+        gap: 22px;
+      }
+    }
+  }
+
+  &__actions {
+    padding-top: 28px;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include sm-tablets {
+      gap: 40px;
+    }
+
+    @include md-desktop {
+      padding-top: 20px;
+    }
+
+    .actions-notifications {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+
+      &__success,
+      &__error {
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      &__success {
+        color: var(--main-100);
+        background-color: var(--white-10);
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      &__error {
+        color: var(--red-100);
+        background-color: var(--red-10);
+        margin-top: 24px;
+      }
+
+      @include sm-tablets {
+        column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+
+        &__error {
+          margin-top: 0;
+          grid-column: 1/3;
+        }
+      }
+    }
+
+    .actions-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @include md-desktop {
+        gap: 20px;
+      }
+
+      .text-input input {
+        margin-bottom: 0;
+      }
+    }
+
+    .security-form__buttons {
+      @include sm-tablets {
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    a {
+      text-align: center;
+    }
+
+    .box-button {
+      width: 100%;
+      align-self: center;
+    }
+
+    @include sm-tablets {
+      gap: 20px;
+
+      .box-button {
+        width: 210px;
+      }
+    }
+
+    @include md-desktop {
+      .box-button {
+        width: 160px;
+      }
+    }
+  }
+}

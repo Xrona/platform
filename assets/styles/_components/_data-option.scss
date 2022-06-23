@@ -1,0 +1,16 @@
+.data-option {
+  color: var(--main-100);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  svg {
+    margin: 4px;
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--black-100);
+  }
+}

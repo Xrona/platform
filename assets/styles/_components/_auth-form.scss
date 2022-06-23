@@ -1,0 +1,225 @@
+.login-form {
+  @include md-desktop {
+    margin-top: 60px;
+  }
+}
+
+.auth-form {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(40px);
+  border-radius: 20px;
+  padding: 48px 16px;
+
+  @include sm-tablets {
+    min-height: auto;
+    padding: 48px;
+    margin: 0 24px;
+    width: calc(100% - 48px);
+  }
+
+  @include md-desktop {
+    padding: 80px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--black-100);
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @include sm-tablets {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 160%;
+
+    @include sm-tablets {
+      font-size: 18px;
+    }
+
+    @include lg-desktop {
+      padding: 0 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 40px;
+
+    .text-input + .text-input {
+      margin-top: 28px;
+    }
+
+    &.form-confirm {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: 12px;
+        line-height: 160%;
+        align-self: end;
+        color: var(--gray-100);
+        padding: 0 0 0 5px;
+        text-align: left;
+        margin-bottom: 0 !important;
+
+        @include sm-tablets {
+          font-size: 14px;
+          padding-left: 0;
+        }
+
+        a {
+          color: var(--main-100);
+        }
+      }
+
+      button {
+        margin-top: 40px;
+        height: 48px;
+        width: 100%;
+        align-self: center;
+
+        @include sm-tablets {
+          width: 180px;
+        }
+      }
+    }
+
+    &.form-complete {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+
+      button {
+        width: 100%;
+        height: 48px;
+
+        @include sm-tablets {
+          width: 180px;
+        }
+      }
+
+      & + .auth-form__sign-in {
+        display: none;
+      }
+    }
+
+    a.auth-form__content__remember {
+      align-self: end;
+      font-size: 12px;
+      color: var(--gray-100);
+
+      @include sm-tablets {
+        font-size: 14px;
+      }
+    }
+
+    &__form-button {
+      width: 100%;
+      height: 48px;
+      margin-top: 30px;
+      align-self: center;
+
+      @include sm-tablets {
+        width: 242px;
+        margin-top: 40px;
+      }
+
+      @include md-desktop {
+        width: 180px;
+      }
+
+      &.disable {
+        background-color: var(--gray-100) !important;
+      }
+    }
+
+    &__confirm-agreement {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+
+      button {
+        display: block;
+      }
+
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: left;
+        color: var(--gray-100);
+        padding-left: 0;
+        margin-bottom: 0 !important;
+        flex-basis: 200px;
+
+        @media screen and (min-width: 430px) {
+          flex-basis: 330px;
+        }
+
+        @include sm-tablets {
+          flex-basis: 403px;
+        }
+
+        @include md-desktop {
+          line-height: 22px;
+          font-size: 14px;
+          flex-basis: 490px;
+        }
+      }
+
+      & + .error-validation {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .checkbox-button {
+    align-items: flex-start;
+
+    button {
+      color: transparent;
+    }
+  }
+
+  &__sign-in {
+    display: flex;
+    justify-content: center;
+
+    span {
+      margin-top: 20px;
+      align-self: center;
+      color: var(--gray-100);
+      font-size: 12px;
+
+      a {
+        color: var(--main-80);
+      }
+
+      @include sm-tablets {
+        margin-top: 40px;
+        font-size: 14px;
+      }
+
+      @include md-desktop {
+        font-size: 16px;
+      }
+    }
+  }
+}

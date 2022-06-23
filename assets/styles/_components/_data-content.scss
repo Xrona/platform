@@ -1,0 +1,307 @@
+.data-content {
+  padding-bottom: 70px;
+
+  @include sm-tablets {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+  }
+
+  @include md-desktop {
+    padding: 25px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+
+    .head-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 220px 53px;
+      row-gap: 10px;
+      column-gap: 17px;
+      margin: 20px 0;
+
+      @include sm-tablets {
+        grid-template-columns: 484px 154px;
+        grid-template-rows: repeat(3, 91px);
+        row-gap: 10px;
+        column-gap: 11px;
+      }
+
+      @include md-desktop {
+        grid-template-columns: 3fr 1fr;
+        order: 2;
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+
+      img {
+        border-radius: 10px;
+        background-color: var(--gray-70);
+        font-size: 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      img:first-child {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width: 100%;
+        height: 220px;
+
+        @include sm-tablets {
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 4;
+          height: 100%;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 16px;
+      line-height: 160%;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .data-address {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__options {
+    > h3 {
+      margin-bottom: 16px;
+
+      @include md-desktop {
+        margin-bottom: 10px;
+      }
+    }
+
+    h3 {
+      font-size: 14px;
+      line-height: 160%;
+      font-weight: 500;
+    }
+
+    .data-information {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 16px;
+      row-gap: 16px;
+      margin-bottom: 4px;
+
+      @include sm-tablets {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 13px;
+        margin-bottom: 24px;
+      }
+
+      @include md-desktop {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      &__property {
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--blue-100);
+      }
+    }
+
+    .data-progress {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      gap: 20px;
+      margin-bottom: 20px;
+
+      @include sm-tablets {
+        padding: 0;
+        display: block;
+      }
+
+      .progress-line {
+        display: flex;
+        flex-direction: column;
+
+        &__head {
+          h4 {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--blue-100);
+
+            @include sm-tablets {
+              font-size: 14px;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+
+            span {
+              font-size: 10px;
+            }
+          }
+
+          h4:first-child {
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+
+          h4:nth-child(2) {
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+        }
+
+        &__content {
+          margin: 10px 0;
+          order: -1;
+          display: block;
+        }
+      }
+    }
+
+    .data-description {
+      display: flex;
+      flex-direction: column;
+
+      &__stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
+        row-gap: 20px;
+        margin-bottom: 24px;
+
+        @include sm-tablets {
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 10px;
+          row-gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        &__item {
+          @include sm-tablets {
+            padding: 10px;
+            border: 1px solid var(--white-10);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+
+            span:first-child {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 22px;
+              color: var(--main-100);
+            }
+
+            span:last-child {
+              font-size: 10px;
+              font-weight: 300;
+              line-height: 12px;
+            }
+          }
+        }
+      }
+
+      .box-button {
+        order: -1;
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-bottom: 30px;
+
+        @include sm-tablets {
+          order: 3;
+          width: 210px;
+          align-self: end;
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+
+        @include md-desktop {
+          width: 160px;
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--black-100);
+
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .data-item {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        padding: 10px;
+        border: 1px solid var(--white-10);
+        border-radius: 10px;
+        color: var(--black-100);
+
+        span:first-child {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 160%;
+          text-align: center;
+        }
+
+        span:last-child {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 160%;
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 24px;
+      flex-direction: column;
+
+      .box-button {
+        &:last-child {
+          margin-top: 24px;
+          margin-bottom: 0;
+
+          @include sm-tablets {
+            margin: 0;
+          }
+        }
+        &:first-child {
+          order: 1;
+
+          @include sm-tablets {
+            order: initial;
+          }
+        }
+      }
+
+      @include sm-tablets {
+        justify-content: flex-end;
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+.main-footer {
+  padding: 45px 0 39px;
+  color: var(--gray-100);
+  position: relative;
+  font-size: 16px;
+  background-color: white;
+  line-height: 25.6px;
+
+  @include sm-tablets {
+    padding: 45px 24px;
+  }
+
+  a {
+    display: block;
+    color: var(--gray-100);
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--black-100);
+    margin-top: 25px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    @include sm-tablets {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    &.title-documents {
+      margin-bottom: 32px;
+
+      @include sm-tablets {
+        margin-top: 15px;
+        margin-bottom: 21px;
+      }
+    }
+  }
+
+  &__information {
+    margin-bottom: 65px !important;
+    font-size: 14px;
+    line-height: 160%;
+
+    @include sm-tablets {
+      font-size: 16px;
+      margin-bottom: 12px !important;
+    }
+
+    span {
+      display: inline-block;
+
+      @include md-desktop {
+        display: block;
+      }
+    }
+  }
+
+  &__contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 160%;
+
+    @include sm-tablets {
+      font-size: 16px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__documents-links {
+    a {
+      position: relative;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 22px;
+
+      @include sm-tablets {
+        font-size: 16px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      //&::after {
+      //  content: '';
+      //  position: absolute;
+      //  display: inline-block;
+      //  left: 0;
+      //  right: 0;
+      //  bottom: 4px;
+      //  width: 100%;
+      //  height: 1px;
+      //  background-color: var(--gray-100);
+      //}
+    }
+
+    @include sm-tablets {
+      margin-bottom: 92px;
+      font-size: 16px;
+    }
+
+    @include md-desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+
+    @include sm-tablets {
+      margin-top: 0;
+      position: absolute;
+      bottom: 76px;
+    }
+
+    @include md-desktop {
+      position: static;
+      margin-top: 39px;
+    }
+  }
+
+  &__invest-info {
+    font-size: 14px;
+    line-height: 22.4px;
+    position: absolute;
+    display: none;
+
+    @include sm-tablets {
+      bottom: 44px;
+      display: block;
+    }
+
+    @include md-desktop {
+      bottom: 59px;
+    }
+  }
+
+  &__invest-info-xs {
+    display: block;
+    font-size: 14px;
+    line-height: 160%;
+
+    @include sm-tablets {
+      display: none;
+    }
+  }
+}

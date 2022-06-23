@@ -1,0 +1,58 @@
+.one-object {
+  &__title,
+  &__back {
+    margin-bottom: 21px;
+
+    @include sm-tablets {
+      margin-bottom: 46px;
+    }
+
+    .box-button {
+      width: 60px;
+
+      span {
+        display: none;
+      }
+
+      @include sm-tablets {
+        width: 90px;
+      }
+
+      @include md-desktop {
+        width: 160px;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include md-desktop {
+      display: block;
+    }
+  }
+
+  .object-content {
+    display: flex;
+    flex-direction: column;
+
+    .photo-gallery {
+      order: -1;
+      margin-bottom: 20px;
+
+      @include sm-tablets {
+        margin-bottom: 0;
+        margin-top: 14px;
+        order: 0;
+      }
+    }
+
+    .data-content__options {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,326 @@
+@import '../fonts/fonts';
+@import '../mixins/media';
+@import '_components/auth-layout';
+@import '_components/auth-form';
+@import '_components/text-input';
+@import '_components/box-button';
+@import '_components/main-footer';
+@import '_components/checkbox-button';
+@import '_components/left-sidebar';
+@import '_components/main-navbar';
+@import '_components/file-input-area';
+@import '_components/verification-content';
+@import '_components/verification';
+@import '_components/box-dropdown';
+@import '_components/form-complete';
+@import '_components/form-confirm';
+@import '_components/objects';
+@import '_components/summary';
+@import '_components/summary-balance';
+@import '_components/summary-tickers';
+@import '_components/summary-profit';
+@import '_components/summary-deals';
+@import '_components/summary-transactions';
+@import '_components/bid-head';
+@import '_components/text-box';
+@import '_components/input-dropdown';
+@import '_components/file-input';
+@import '_components/bid-create';
+@import '_components/card-status';
+@import '_components/bid-confirmation';
+@import '_components/verification-about-company';
+@import '_components/verification-financial-position';
+@import '_components/verification-worksheet';
+@import '_components/verification-confirmation';
+@import '_components/verification-checkup';
+@import '_components/documents';
+@import '_components/bid';
+@import '_components/settings';
+@import '_components/settings-platform';
+@import '_components/settings-access';
+@import '_components/table-board';
+@import '_components/one-bid';
+@import '_components/progress-line';
+@import '_components/deals';
+@import '_components/mobile-menu';
+@import '_components/back-button';
+@import '_components/data-list';
+@import '_components/data-address';
+@import '_components/data-content';
+@import '_components/transactions';
+@import '_components/bid-edit';
+@import '_components/read-field';
+@import '_components/period-buttons';
+@import '_components/sms-modal';
+@import '_components/disabled-field';
+@import '_components/notification-snackbar';
+@import '_components/users';
+@import '_components/users-head';
+@import '_components/user-head';
+@import '_components/user-options';
+@import '_components/photo-gallery';
+@import '_components/view-data';
+@import '_components/chart-body';
+@import '_components/one-object';
+@import '_components/reset-form';
+@import '_components/icon-button';
+@import '_components/data-card';
+@import '_components/data-option';
+@import '_components/summary-guest';
+@import '_components/bid-guest';
+@import '_components/notifications';
+@import '_components/landing-navbar';
+@import '_components/document-link';
+@import '_components/landing';
+@import '_components/admin-head';
+@import '_components/admin-content';
+@import '_components/new-user';
+@import '_components/settings-user';
+@import '_components/user';
+@import '_components/settings-account';
+@import '_components/security';
+
+input {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.v-application p {
+  margin-bottom: 0;
+}
+
+* {
+  font-family: 'Montserrat', serif;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+:root {
+  --main-100: #00b1b9;
+  --main-80: #4cc8ce;
+  --main-60: #66d0d5;
+
+  --black-100: #212529;
+  //--black-80: #212529;
+  //--black-60: #1d1d1b;
+
+  --gray-100: #868e96;
+  --gray-90: #a4a4a3;
+  --gray-80: #cad5da;
+  --gray-70: #e3e6eb;
+  --gray-60: #9eafbc;
+  --gray-50: #e8e8e8;
+  --gray-40: #eaeaf3;
+  --gray-20: #fcfcfe;
+  --gray-10: #f9fafc;
+
+  --white-10: #e6f8f8;
+
+  --red-100: #df3d3d;
+  --red-10: #f8e6e6;
+
+  --green-10: #3aaa35;
+
+  --blue-100: #73819c;
+  --blue-10: #212529;
+
+  --yellow-100: #e6b96e;
+  --button-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  --ruble: ' /руб';
+}
+
+button,
+input {
+  outline: none;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.svg-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  color: inherit;
+  fill: none;
+  stroke: currentColor;
+  vertical-align: -0.15em;
+}
+
+.svg-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.svg-up {
+  transform: rotate(0deg);
+}
+
+.svg-right {
+  transform: rotate(90deg);
+}
+.svg-down {
+  transform: rotate(180deg);
+}
+
+.svg-left {
+  transform: rotate(-90deg);
+}
+
+.default-layout {
+  .v-tooltip__content {
+    @include lg-x-desktop {
+      display: none !important;
+    }
+  }
+
+  .v-main {
+    background-color: var(--gray-20);
+    position: relative;
+    z-index: 0;
+
+    &.showed-menu {
+      overflow: hidden;
+      max-height: 100vh;
+    }
+
+    .container {
+      padding-top: 98px;
+      padding-bottom: 115px;
+
+      @include md-desktop {
+        padding-top: 95px;
+        margin-left: 110px;
+        width: calc(100% - 110px);
+        padding-bottom: 125px;
+      }
+
+      @include lg-desktop {
+        margin-left: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.button-link {
+  color: var(--blue-100) !important;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.step__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include sm-tablets {
+    gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+
+    @include sm-tablets {
+      width: 210px;
+    }
+
+    @include md-desktop {
+      width: 160px;
+    }
+  }
+
+  .button-next {
+    order: -1;
+
+    @include sm-tablets {
+      order: 1;
+    }
+  }
+
+  .v-main {
+    background-color: var(--gray-10);
+  }
+
+  .button-prev {
+    font-size: 14px;
+  }
+
+  &.first-step {
+    justify-content: end;
+  }
+}
+
+.error-validation {
+  display: grid;
+  grid-template-columns: 19px 1fr;
+  margin-bottom: 10px;
+  align-items: center;
+  min-height: 20px;
+  width: 100%;
+  gap: 10px;
+  color: var(--red-100);
+
+  svg {
+    margin: 1.6px;
+    width: 16.6px;
+    height: 16.6px;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+  }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transform-origin: left top;
+  transition: transform 0.3s ease;
+}
+
+.slide-enter, .slide-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  transform-origin: left top;
+  transform: ScaleY(0);
+}
+
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: opacity 200ms ease;
+}
+
+.opacity-enter-active {
+  transition-delay: 150ms;
+}
+
+.opacity-enter, .opacity-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
+
+.loading-leave-active {
+  transition: all ease 0.75s;
+}
+
+.loading-enter-active {
+  transition: all ease-in 1s;
+}
+
+.loading-leave-to {
+  opacity: 0;
+}
+
+.loading-enter-to {
+  opacity: 1;
+}

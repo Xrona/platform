@@ -1,0 +1,68 @@
+.admin-content {
+  padding-bottom: 4px;
+
+  @include sm-tablets {
+    padding-bottom: 28px;
+  }
+
+  @include md-desktop {
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    display: none;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include md-desktop {
+      display: block;
+    }
+  }
+
+  .photo-gallery {
+    margin: 24px 0;
+
+    @include md-desktop {
+      margin: 20px 0;
+    }
+  }
+
+  .input-dropdown__label {
+    font-size: 12px;
+  }
+  .input-dropdown__target {
+    margin-bottom: 16px;
+
+    @include sm-tablets {
+      margin-bottom: 24px;
+    }
+
+    @include md-desktop {
+      margin-bottom: 20px;
+    }
+  }
+
+  .text-input {
+    label {
+      span {
+        font-size: 12px;
+      }
+    }
+    input {
+      margin-bottom: 16px;
+
+      @include sm-tablets {
+        margin-bottom: 24px;
+      }
+
+      @include md-desktop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__changes {
+    row-gap: 16px;
+  }
+}

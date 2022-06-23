@@ -1,0 +1,43 @@
+.user {
+  &__deals {
+    margin-top: 40px;
+
+    .deals-head {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      row-gap: 20px;
+
+      @include sm-tablets {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .period-buttons {
+        width: 100%;
+
+        @include sm-tablets {
+          width: 330px;
+        }
+
+        @include md-desktop {
+          width: auto;
+        }
+      }
+    }
+
+    .deal-sort {
+      margin: 20px 0;
+      width: 100%;
+
+      @include sm-tablets {
+        width: 272px;
+      }
+    }
+
+    .data-card {
+      max-width: 320px;
+    }
+  }
+}

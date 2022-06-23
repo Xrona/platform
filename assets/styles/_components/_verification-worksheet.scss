@@ -1,0 +1,55 @@
+.verification__content {
+  &__worksheet {
+    padding-bottom: 10px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: black;
+
+      @include sm-tablets {
+        margin-bottom: -10px;
+      }
+
+      @include md-desktop {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+
+    h4 {
+      font-size: 14px;
+      line-height: 160%;
+      color: black;
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+      @include sm-tablets {
+        margin-top: 30px;
+      }
+    }
+
+    &__errors {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red-100);
+      font-size: 14px;
+      gap: 10px;
+    }
+
+    .checkbox-button + .checkbox-button {
+      margin-top: 10px;
+    }
+
+    .checkbox-button {
+      @include sm-tablets {
+        span {
+          font-size: 12px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.bid-guest {
+  &__title {
+    line-height: 38.4px;
+    margin-bottom: 24px !important;
+
+    @include md-desktop {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  &__text {
+    align-items: center;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 26px !important;
+
+    @include sm-tablets {
+      margin-bottom: 48px !important;
+    }
+
+    @include md-desktop {
+      margin-bottom: 40px !important;
+    }
+
+    span {
+      svg {
+        position: absolute;
+        left: 0;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      padding-left: 25px;
+      position: relative;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--main-100);
+      line-height: 24px;
+    }
+  }
+
+  a {
+    width: 100%;
+
+    @include sm-tablets {
+      width: 230px;
+    }
+
+    @include md-desktop {
+      width: 244px;
+    }
+  }
+}

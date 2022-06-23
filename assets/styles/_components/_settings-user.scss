@@ -1,0 +1,110 @@
+.settings-user {
+  &__head {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 22px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include sm-tablets {
+      flex-wrap: nowrap;
+    }
+
+    > .back-button {
+      padding: 0;
+      margin-bottom: 0 !important;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 24px;
+      width: 100%;
+
+      @include sm-tablets {
+        width: auto;
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
+  }
+
+  .text-input {
+    &__label {
+      font-size: 12px;
+    }
+
+    input {
+      margin-bottom: 24px;
+
+      @include md-desktop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .box-button:not(.back-button) {
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include md-desktop {
+      margin-bottom: 20px;
+      width: 160px;
+    }
+
+    &.more-logs {
+      width: 100%;
+    }
+  }
+
+  &__save {
+    margin-top: 24px;
+  }
+
+  &__logs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+  }
+
+  .table-board {
+    .table-head,
+    .table-row {
+      grid-template-columns: 40px repeat(2, 1fr);
+
+      @include sm-tablets {
+        font-size: 12px;
+        grid-template-columns: 40px repeat(2, 1fr) 0.75fr;
+      }
+
+      @include md-desktop {
+        font-size: 14px;
+      }
+
+      .column-sm {
+        display: none;
+
+        @include sm-tablets {
+          display: block;
+        }
+      }
+
+      .column-dynamic {
+        display: block !important;
+      }
+    }
+
+    .table-head > div {
+      font-weight: 500;
+    }
+  }
+}

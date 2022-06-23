@@ -1,0 +1,55 @@
+.period-buttons {
+  &.only-dropdown {
+    .period-buttons__list {
+      display: none !important;
+    }
+    .period-buttons__dropdown {
+      display: block !important;
+    }
+  }
+
+  &__list {
+    display: none;
+    gap: 10px;
+
+    @include md-desktop {
+      display: flex;
+    }
+
+    .time-button {
+      padding: 12px 20px;
+      border-radius: 10px;
+      background-color: white;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--blue-100);
+      height: 48px;
+      width: fit-content;
+
+      &.active {
+        background-color: var(--white-10);
+        font-weight: 500;
+        color: var(--main-100);
+      }
+    }
+  }
+
+  &__dropdown {
+    .box-dropdown__button {
+      background-color: white;
+      color: var(--blue-100);
+
+      @include sm-tablets {
+        padding: 12px 20px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    @include md-desktop {
+      display: none;
+    }
+  }
+}

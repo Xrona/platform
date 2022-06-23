@@ -1,0 +1,19 @@
+.summary {
+  padding-bottom: 60px;
+
+  &__sm {
+    @include sm-tablets {
+      padding: 0 24px;
+    }
+
+    @include md-desktop {
+      padding: 0;
+    }
+  }
+
+  h1 {
+    @include sm-tablets {
+      display: none;
+    }
+  }
+}

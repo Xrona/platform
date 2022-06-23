@@ -1,0 +1,176 @@
+.landing-navbar {
+  width: 100%;
+  height: 80px;
+  padding: 10px 0;
+  background-color: white;
+
+  .navbar-list {
+    position: fixed;
+    transition: all 0.2s;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: -110vw;
+    z-index: 3;
+
+    &.active {
+      left: 0;
+    }
+
+    @include md-desktop {
+      position: static;
+      height: 80px;
+      width: auto;
+    }
+
+    .navbar-close {
+      width: 100%;
+      height: 80px;
+      padding: 28px 16px;
+      background-color: white;
+      display: flex;
+      justify-content: flex-end;
+
+      @include md-desktop {
+        display: none;
+      }
+
+      button {
+        width: 24px;
+        height: 24px;
+        color: var(--black-100);
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 !important;
+
+      margin: 24px 16px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        width: 100%;
+        a {
+          color: var(--blue-100);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          display: block;
+          height: 48px;
+          padding: 15px 10px;
+        }
+      }
+
+      @include md-desktop {
+        margin: 0 15px 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        li {
+          margin: 0 !important;
+          white-space: nowrap;
+
+          a {
+            line-height: 30px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .navbar-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      @include md-desktop {
+        display: none;
+      }
+
+      .button-link {
+        color: var(--black-100) !important;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+      }
+
+      button {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--main-100);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .navbar-auth {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 5px 0;
+
+    .navbar-burger {
+      flex-grow: 1;
+
+      button {
+        padding: 6px 4px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 24px;
+        width: 24px;
+
+        &:before {
+          content: '';
+          width: 16px;
+          height: 2px;
+          position: absolute;
+          top: 4px;
+          background-color: var(--black-100);
+          border-radius: 2px;
+        }
+
+        &:after {
+          content: '';
+          width: 16px;
+          height: 2px;
+          position: absolute;
+          bottom: 4px;
+          background-color: var(--black-100);
+          border-radius: 2px;
+        }
+
+        span {
+          display: flex;
+          width: 16px;
+          height: 2px;
+          background-color: var(--black-100);
+          border-radius: 2px;
+        }
+      }
+
+      @include md-desktop {
+        display: none;
+      }
+    }
+
+    .box-button,
+    .button-link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22.4px;
+      min-width: 86px;
+    }
+  }
+}

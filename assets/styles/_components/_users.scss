@@ -1,0 +1,142 @@
+.users {
+  &__table {
+    &__head-xs {
+      display: none;
+
+      @include sm-tablets {
+        display: block;
+      }
+    }
+
+    &__head-sm {
+      display: none;
+
+      @include md-desktop {
+        display: block;
+      }
+    }
+
+    &__item-sm {
+      display: none;
+
+      @include sm-tablets {
+        display: block;
+      }
+    }
+
+    &__item-md {
+      display: none;
+
+      @include md-desktop {
+        display: block;
+      }
+    }
+
+    &__item-filter {
+      display: block;
+
+      @include md-desktop {
+        display: none;
+      }
+    }
+
+    &__head-dropdown-sm {
+      @include sm-tablets {
+        display: none;
+      }
+    }
+
+    .table-head {
+      grid-template-columns: 40px repeat(2, 1fr);
+      column-gap: 10px;
+      font-size: 12px;
+      color: var(--blue-100);
+
+      > div {
+        font-weight: 500 !important;
+      }
+
+      @include sm-tablets {
+        grid-template-columns: 40px repeat(4, 1fr);
+      }
+    }
+
+    .box-dropdown {
+      @include md-desktop {
+        display: none;
+      }
+
+      &__button {
+        background-color: white;
+        color: var(--blue-100);
+        font-size: 12px;
+        font-weight: 500;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &__menu__item {
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    .table-row {
+      grid-template-columns: 40px repeat(2, 1fr);
+      column-gap: 10px;
+      color: var(--blue-100);
+
+      > div {
+        font-size: 12px;
+        color: inherit;
+        font-weight: 400;
+
+        @include lg-desktop {
+          font-size: 14px;
+        }
+
+        input {
+          font-size: inherit;
+          color: inherit;
+          font-weight: inherit;
+        }
+      }
+
+      @include sm-tablets {
+        grid-template-columns: 40px repeat(4, 1fr);
+      }
+
+      @include md-desktop {
+        grid-template-columns: 40px 18% 18% 16% 13% 15% 1fr;
+      }
+
+      .col-button {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          width: 40px;
+          height: 40px;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          color: var(--blue-100);
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: var(--gray-70);
+          }
+
+          @include sm-tablets {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

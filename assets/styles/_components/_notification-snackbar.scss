@@ -1,0 +1,106 @@
+.notification-snackbar {
+  width: 438px;
+  transition: all ease-out 0.3s;
+  position: fixed;
+  top: 80px;
+  right: 100px;
+  z-index: 11;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  clip-path: fill-box;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    --index: 1;
+
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    padding: 0 20px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.05);
+    //animation-name: notification;
+    //animation-fill-mode: forwards;
+    //animation-timing-function: ease-out;
+    //animation-duration: 0.55s;
+    transition: all ease-out 0.3s;
+    position: relative;
+    margin-bottom: 0;
+    //z-index: 1;
+
+    &.show {
+      max-height: 68px;
+      padding: 10px 20px;
+      margin-bottom: 4px;
+    }
+
+    //@keyframes notification {
+    //  0% {
+    //    z-index: 1;
+    //    transform: TranslateY(-100%);
+    //  }
+    //  80% {
+    //    z-index: 1;
+    //    transform: TranslateY(0);
+    //  }
+    //  100% {
+    //    transform: TranslateY(0);
+    //    z-index: calc(var(--index) + 2);
+    //  }
+    //}
+
+    .notification-item__icon {
+      border-radius: 100%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.success-notification {
+        background-color: var(--white-10);
+        color: var(--main-100);
+      }
+
+      &.error-notification {
+        background-color: var(--red-10);
+        color: var(--red-100);
+      }
+    }
+
+    .notification-item__text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      height: 100%;
+      box-orient: vertical;
+      line-clamp: 2;
+      font-size: 14px;
+      color: var(--blue-100);
+      font-weight: 500;
+    }
+  }
+
+  .box-button {
+    --buttonIndex: 1;
+    height: 62px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    z-index: calc(var(--buttonIndex) + 2);
+  }
+}

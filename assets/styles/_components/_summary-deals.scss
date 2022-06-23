@@ -1,0 +1,71 @@
+.summary-deals {
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 160%;
+    color: var(--black-100);
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    @include sm-tablets {
+      margin-bottom: 20px;
+    }
+
+    @include md-desktop {
+      margin-top: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include sm-tablets {
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    @include md-desktop {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    > div {
+      width: 100%;
+      padding: 16px 20px 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px var(--gray-40);
+
+      @include sm-tablets {
+        padding: 16px 20px 13px;
+        width: 210px;
+      }
+
+      @include md-desktop {
+        width: 100%;
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 160%;
+        color: var(--blue-100);
+      }
+
+      p {
+        margin-bottom: 0 !important;
+        font-size: 24px;
+        color: var(--black-100);
+        line-height: 45px;
+
+        @include sm-tablets {
+          line-height: 75px;
+        }
+      }
+    }
+  }
+}

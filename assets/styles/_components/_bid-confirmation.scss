@@ -1,0 +1,92 @@
+.bid-create__confirmation {
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+
+  .error-validation {
+    margin-top: 13px;
+  }
+
+  .checkbox-button + .checkbox-button {
+    margin-top: 20px;
+
+    @include md-desktop {
+      margin-top: 10px;
+    }
+  }
+
+  .checkbox-button {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 19px;
+
+    button {
+      margin: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+      }
+    }
+
+    span {
+      display: flex;
+      font-size: 12px;
+      line-height: 160%;
+      color: var(--gray-100);
+      white-space: pre-wrap;
+    }
+  }
+
+  p {
+    margin-top: 30px;
+    margin-bottom: 30px !important;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--black-100);
+    font-weight: 400;
+
+    @include sm-tablets {
+      margin-bottom: 20px !important;
+    }
+
+    span {
+      display: block;
+      font-weight: 500;
+
+      @include sm-tablets {
+        display: inline;
+      }
+    }
+  }
+
+  &__edit {
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    background-color: var(--main-100);
+    margin-bottom: 30px;
+    color: white;
+    line-height: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+
+    @include sm-tablets {
+      width: 210px;
+      margin-bottom: 281px;
+    }
+
+    @include md-desktop {
+      margin-bottom: 67px;
+      width: 160px;
+    }
+  }
+}

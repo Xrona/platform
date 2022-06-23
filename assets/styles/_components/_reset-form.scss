@@ -1,0 +1,73 @@
+.reset-form {
+  padding: 48px 16px;
+
+  @include sm-tablets {
+    padding: 48px;
+  }
+
+  @include md-desktop {
+    padding: 60px;
+  }
+
+  .box-button {
+    height: 48px;
+    width: 100%;
+    margin-top: 24px;
+
+    @include sm-tablets {
+      width: 210px;
+    }
+
+    @include md-desktop {
+      width: 160px;
+      margin-top: 40px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+
+    @include sm-tablets {
+      font-size: 16px;
+    }
+  }
+
+  a {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 70px;
+    line-height: 140%;
+
+    @include sm-tablets {
+      font-size: 16px;
+      padding: 0;
+    }
+  }
+
+  .auth-form__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text-input {
+      position: relative;
+      padding-bottom: 28px;
+
+      &__label {
+        font-size: 12px;
+        line-height: 140%;
+      }
+
+      input {
+        margin-top: 4px;
+      }
+
+      .error-validation {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

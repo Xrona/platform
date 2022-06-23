@@ -1,0 +1,28 @@
+.file-input-area {
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed var(--gray-80);
+  border-radius: 5px;
+  color: var(--gray-80);
+
+  p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 160%;
+    color: var(--gray-80);
+
+    @include sm-tablets {
+      font-size: 14px;
+    }
+
+    > strong {
+      font-size: 12px;
+      line-height: 160%;
+      font-weight: 500;
+
+      @include sm-tablets {
+        font-size: 14px;
+      }
+    }
+  }
+}

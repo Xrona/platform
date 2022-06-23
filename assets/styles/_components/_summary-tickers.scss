@@ -1,0 +1,119 @@
+.summary-tickers {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    @include sm-tablets {
+      margin-bottom: 20px;
+    }
+
+    @include md-desktop {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 160%;
+      color: var(--black-100);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include md-desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+    }
+
+    .tickers-graphic {
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px var(--gray-40);
+      padding: 16px 20px 13px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 22px 45px;
+      grid-column-gap: 12px;
+      grid-row-gap: 4px;
+
+      @include sm-tablets {
+        padding: 20px;
+        grid-template-rows: 22px 29px;
+        grid-row-gap: 0;
+      }
+
+      @include md-desktop {
+        padding: 16px 20px 13px;
+        grid-row-gap: 4px;
+        grid-template-rows: 22px 45px;
+      }
+
+      span {
+        word-wrap: break-word;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 160%;
+        color: var(--blue-100);
+      }
+
+      p {
+        margin-bottom: 0 !important;
+        font-size: 24px;
+        color: var(--black-100);
+        line-height: 45px;
+        font-weight: 400;
+        align-self: center;
+
+        @include sm-tablets {
+          line-height: 160%;
+          font-size: 18px;
+        }
+
+        @include md-desktop {
+          line-height: 45px;
+        }
+
+        &::after {
+          content: var(--ruble);
+          display: inline;
+          font-size: 12px;
+          color: var(--gray-100);
+        }
+      }
+
+      > div {
+        margin-right: -20px;
+        margin-top: -16px;
+        margin-bottom: -13px;
+        grid-row: span 2;
+
+        .chart-body {
+          padding: 0 !important;
+
+          canvas {
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+
+        @include sm-tablets {
+          margin-top: -20px;
+          margin-bottom: -20px;
+        }
+
+        @include md-desktop {
+          margin-top: -16px;
+          margin-bottom: -13px;
+        }
+      }
+    }
+  }
+}

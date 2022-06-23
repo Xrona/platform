@@ -1,0 +1,34 @@
+.user-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  @include md-desktop {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .box-button {
+    width: 100%;
+    height: 48px;
+
+    @include md-desktop {
+      width: 255px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    @include md-desktop {
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+}

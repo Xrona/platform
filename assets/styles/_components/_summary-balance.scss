@@ -1,0 +1,118 @@
+.summary-balance {
+  margin-top: 30px;
+
+  @include sm-tablets {
+    margin-top: 10px;
+  }
+
+  @include md-desktop {
+    margin-top: 9px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--black-100);
+    margin-bottom: 30px;
+
+    @include sm-tablets {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 160%;
+      color: var(--black-100);
+    }
+  }
+
+  &__content {
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px var(--gray-40);
+
+    @include sm-tablets {
+      padding: 20px;
+    }
+
+    @include md-desktop {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px 15px;
+    }
+
+    &__props {
+      @include md-desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 235px);
+        grid-template-rows: 22px 45px;
+
+        p + h4 {
+          grid-column: 2;
+          grid-row: 1;
+        }
+      }
+
+      h4 {
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 400;
+        color: var(--black-100);
+
+        @include sm-tablets {
+          font-size: 14px;
+          color: var(--blue-100);
+        }
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 160%;
+        font-weight: 400;
+        color: var(--black-100);
+
+        &::after {
+          display: inline;
+          content: var(--ruble);
+          font-size: 12px;
+          color: var(--gray-100);
+
+          @include sm-tablets {
+            font-size: 10px;
+          }
+        }
+
+        @include sm-tablets {
+          font-size: 18px;
+        }
+
+        @include md-desktop {
+          line-height: 45px;
+        }
+      }
+    }
+
+    &__options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @include md-desktop {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      .box-button {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+
+        @include md-desktop {
+          width: 160px;
+        }
+      }
+    }
+  }
+}

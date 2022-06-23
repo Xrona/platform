@@ -1,0 +1,89 @@
+.new-user {
+  &__head {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .box-button {
+      padding: 0;
+      justify-content: center;
+    }
+  }
+  &__form-field {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    align-items: center;
+
+    .text-input,
+    .input-dropdown {
+      width: 100%;
+
+      .input-dropdown__label,
+      .text-input__label {
+        font-size: 12px;
+      }
+
+      input,
+      .input-dropdown__target {
+        margin-top: 4px;
+        margin-bottom: 24px;
+      }
+
+      @include sm-tablets {
+        width: 1fr;
+      }
+
+      @include md-desktop {
+        width: 330px;
+      }
+    }
+  }
+
+  .checkbox-button {
+    height: 24px;
+  }
+
+  .box-button.save-user {
+    margin-top: 8px;
+    width: 100%;
+
+    @include sm-tablets {
+      width: 160px;
+    }
+
+    @include md-desktop {
+      margin-top: 0;
+    }
+  }
+}
+
+.access-sections {
+  padding-top: 9px;
+
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 48px;
+  }
+
+  @include md-desktop {
+    padding-top: 1px;
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+
+    @include sm-tablets {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

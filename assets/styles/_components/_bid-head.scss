@@ -1,0 +1,88 @@
+.bid {
+  min-height: calc(100vh - 76px);
+
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    padding-bottom: 20px;
+    gap: 24px;
+
+    @include sm-tablets {
+      display: grid;
+      row-gap: 24px;
+      column-gap: 30px;
+      grid-template-columns: repeat(2, 210px);
+      justify-content: space-between;
+    }
+
+    @include md-desktop {
+      display: grid;
+      margin-bottom: -10px;
+      justify-content: space-between;
+      grid-template-columns: 210px 1fr;
+      column-gap: 58px;
+      row-gap: 20px;
+    }
+
+    @include lg-desktop {
+      grid-template-columns: 210px 1/2fr 1fr;
+    }
+
+    &__filters {
+      width: 100%;
+      .box-dropdown__button {
+        span {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
+      }
+
+      @include sm-tablets {
+        width: 210px;
+      }
+    }
+
+    .period-buttons {
+      width: 100%;
+      align-self: end;
+
+      @include sm-tablets {
+        width: 210px;
+      }
+
+      @include md-desktop {
+        width: auto;
+        justify-self: end;
+      }
+    }
+
+    &__create-bid {
+      height: 48px;
+      width: 64px;
+      border-radius: 4px;
+      justify-self: end;
+
+      span {
+        display: none;
+
+        @include sm-tablets {
+          display: inline;
+        }
+      }
+
+      @include sm-tablets {
+        width: 210px;
+      }
+
+      @include md-desktop {
+        width: 160px;
+        justify-self: end;
+      }
+    }
+  }
+}
