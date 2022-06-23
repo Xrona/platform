@@ -1,6 +1,6 @@
-# nuxt-js-kit
+# Platform
 
-> Nuxt JS Kit
+> Platform
 
 ## Installation
 
